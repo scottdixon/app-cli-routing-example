@@ -6,6 +6,7 @@ import { Provider } from "@shopify/app-bridge-react";
 import Cookies from "js-cookie";
 import "@shopify/polaris/styles.css";
 import translations from "@shopify/polaris/locales/en.json";
+import ClientRouter from '../components/client-router';
 
 const client = new ApolloClient({
   fetchOptions: {
@@ -26,6 +27,7 @@ class MyApp extends App {
               forceRedirect: true
             }}
           >
+            <ClientRouter />
             <ApolloProvider client={client}>
               <Component {...pageProps} />
             </ApolloProvider>
