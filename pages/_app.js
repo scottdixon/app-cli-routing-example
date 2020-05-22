@@ -7,6 +7,7 @@ import Cookies from "js-cookie";
 import "@shopify/polaris/styles.css";
 import translations from "@shopify/polaris/locales/en.json";
 import ClientRouter from '../components/client-router';
+import RoutePropagator from '../components/route-propagator';
 
 const client = new ApolloClient({
   fetchOptions: {
@@ -28,6 +29,7 @@ class MyApp extends App {
             }}
           >
             <ClientRouter />
+            <RoutePropagator />
             <ApolloProvider client={client}>
               <Component {...pageProps} />
             </ApolloProvider>
