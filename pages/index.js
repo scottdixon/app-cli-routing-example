@@ -1,8 +1,10 @@
 import { Heading, Page } from "@shopify/polaris";
+import Link from 'next/link';
 
 const Index = () => (
   <Page>
-    <Heading>Shopify app with Node and React 🎉</Heading>
+    <Heading>Index</Heading>
+    <Link href="/example"><a>Link to example</a></Link>
   </Page>
 );
 
